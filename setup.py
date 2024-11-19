@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -11,8 +11,8 @@ setup(
     description='It was created out of the need to locate RGBA images with alpha background in given images.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/Jonathannavaxd/ImageLocator',  # Cambia esto a la URL de tu proyecto
-    packages=find_packages(where='src'),
+    url='https://github.com/Jonathannavaxd/ImageLocator',
+    packages=['pyimagelocator'],
     package_dir={'': 'src'},
     install_requires=[],
     classifiers=[
