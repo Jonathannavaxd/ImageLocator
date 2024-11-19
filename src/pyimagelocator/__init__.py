@@ -104,7 +104,11 @@ def locate_image(
             return None
 
 
-def screenshot(bbox: tuple[int, int, int, int] | None = None) -> np.ndarray:
+def screenshot(region: tuple[int, int, int, int] | None = None) -> np.ndarray:
+    if region:
+        bbox = region[0], region[1], region[2] + region[0], region[3] + region[1]
+    else:
+        bbox = region
     image = ImageGrab.grab(bbox=bbox)
     image_array = np.array(image)
     return cv2.cvtColor(image_array, cv2.COLOR_RGB2BGR)
