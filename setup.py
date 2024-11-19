@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='pyimagelocator',
-    version='0.1.0',
+    version='0.0.1',
     author='Jhonatan Navarro',
     author_email='Jonathannavaxd@gmail.com',
     description='It was created out of the need to locate RGBA images with alpha background in given images.',
